@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream> // inclusione della libreria di input/output
 
 int add2n() {
     int x, y, z; // dichiarazione di tre variabili intere
