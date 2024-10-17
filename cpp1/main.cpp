@@ -72,6 +72,38 @@ int mult3n() {
     return 0;
 }
 
+int div2n() {
+    double x, y, z; // dichiarazione di tre variabili double per divisione
+    std::cout << "Inserisci il primo numero: "; // stampa a video
+    std::cin >> x; // acquisizione del primo numero da tastiera
+    std::cout << "Inserisci il secondo numero: "; // stampa a video
+    std::cin >> y; // acquisizione del secondo numero da tastiera
+    if (y == 0) {
+        std::cout << "Errore: divisione per zero non consentita." << std::endl; // controllo divisione per zero
+        return 1; // ritorna errore
+    }
+    z = x / y; // divisione dei due numeri
+    std::cout << "Il quoziente di " << x << " e " << y << " è " << z << std::endl; // stampa a video
+    return 0;
+}
+
+int div3n() {
+    double x, y, z, w; // dichiarazione di quattro variabili double per divisione
+    std::cout << "Inserisci il primo numero: "; // stampa a video
+    std::cin >> x; // acquisizione del primo numero da tastiera
+    std::cout << "Inserisci il secondo numero: "; // stampa a video
+    std::cin >> y; // acquisizione del secondo numero da tastiera
+    std::cout << "Inserisci il terzo numero: "; // stampa a video
+    std::cin >> z; // acquisizione del terzo numero da tastiera
+    if (y == 0 || z == 0) {
+        std::cout << "Errore: divisione per zero non consentita." << std::endl; // controllo divisione per zero
+        return 1; // ritorna errore
+    }
+    w = x / y / z; // divisione dei tre numeri
+    std::cout << "Il quoziente di " << x << ", " << y << " e " << z << " è " << w << std::endl; // stampa a video
+    return 0;
+}
+
 int main() {
     char operazione; // dichiarazione di una variabile carattere
     int n; // dichiarazione di una variabile intera
@@ -79,12 +111,13 @@ int main() {
     std::cout << "A) Somma" << std::endl; // stampa a video
     std::cout << "B) Differenza" << std::endl; // stampa a video
     std::cout << "C) Moltiplicazione" << std::endl; // stampa a video
+    std::cout << "D) Divisione" << std::endl; // stampa a video
     std::cin >> operazione; // acquisizione dell'operazione da tastiera
     std::cout << "Hai scelto l'operazione " << operazione << std::endl; // stampa a video
     std::cout << "Vuoi inserire 2 o 3 numeri interi?" << std::endl; // stampa a video
     std::cin >> n; // acquisizione del numero di numeri da tastiera
     // controllo dell'operazione scelta
-    if (operazione == 'A' or operazione == 'a') {   
+    if (operazione == 'A' or operazione == 'a') {
         // controllo del numero di numeri scelti
         if (n == 2) {
             add2n(); // chiamata alla funzione add2n
@@ -104,14 +137,23 @@ int main() {
         }
     }
     // controllo dell'operazione scelta
-    else if (operazione == 'C' or operazione == 'c')
-    {
+    else if (operazione == 'C' or operazione == 'c') {
         // controllo del numero di numeri scelti
         if (n == 2) {
             mult2n(); // chiamata alla funzione mult2n
         }
         else if (n == 3) {
             mult3n(); // chiamata alla funzione mult3n
+        }
+    }
+    // controllo dell'operazione scelta
+    else if (operazione == 'D' or operazione == 'd') {
+        // controllo del numero di numeri scelti
+        if (n == 2) {
+            div2n(); // chiamata alla funzione div2n
+        }
+        else if (n == 3) {
+            div3n(); // chiamata alla funzione div3n
         }
     }
 }
