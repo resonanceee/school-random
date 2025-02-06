@@ -18,8 +18,7 @@ int main() {
     int n;
     cout << "Enter a number: ";
     cin >> n;
-    
-    // Measure time for naive approach
+    // measure time
     double inizio1 = clock();
     long long sum1 = naive_factorial_sum(n);
     double fine1 = clock();
