@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n, sum = 0, num, max, min, i;
+    cout<<"Inserisci il numero di numeri che vuoi inserire";
+    cin>>num;
+    for (i=1; i <= num; i++) {
+        cout<<"Inserisci il numero (sei al numero "<< i <<" su "<< num <<")";
+        cin>>n;
+        sum += n;
+        if (i == 1) {
+            min = n;
+            max = n;
+        }
+        else if (n < min) {
+            min = n;
+        }
+        else if (n > max) {
+            max = n;
+        }
+    }
+    i--;
+    double avg = ( double(sum)/double(i));
+    cout<<"La somma dei numeri e' "<< sum << "\n";
+    cout<<"La media dei numeri e' "<< avg << "\n";
+    cout<<"Il numero minimo e' "<< min << "\n";
+    cout<<"Il numero massimo e' "<< max << "\n";
+    return 0;
+}
