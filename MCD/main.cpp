@@ -4,10 +4,10 @@ int main () {
 
 unsigned int n,x,div;
 
-	cout<<"inserisci un numro: ";
+	cout<<"inserisci un numero: ";
 	cin>>n;
 	
-	cout<<"ionserisci un 2ndo numero: ";
+	cout<<"inserisci un secondo numero: ";
 	cin>>x;
 	
 	if(n>=x){
@@ -27,7 +27,3 @@ unsigned int n,x,div;
 	}
 			return 0;
 }
-
-
-
-//min min2 max max2
